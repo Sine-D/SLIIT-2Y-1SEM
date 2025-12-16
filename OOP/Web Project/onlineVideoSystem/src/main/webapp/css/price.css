@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #181818;
+    color: #d1d0cf;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0,0,0,0.6); /* semi-transparent */
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #2196f3;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #2196f3;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header-icons i {
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.header-icons i:hover {
+    color: #2196f3;
+}
+
+.profile-icon {
+    background: #26c6da;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.3rem;
+    margin-left: 10px;
+}
+
+/* Main content padding to avoid header overlap */
+.pricing-container {
+    max-width: 1200px;
+    margin: 120px auto 60px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.page-title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-bottom: 50px;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1f1f1f;
+    border-radius: 12px;
+    padding: 30px 25px;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(229, 9, 20, 0.6);
+}
+
+.popular {
+    border: 2px solid #e50914;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    background: #e50914;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.8);
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.card-price {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #e50914;
+    margin-bottom: 25px;
+}
+
+.card-price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #bbb;
+}
+
+.card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+    color: #ccc;
+    font-size: 1rem;
+    text-align: left;
+    width: 100%;
+}
+
+.card-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.btn-select {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 40px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn-select:hover {
+    background-color: #b0070f;
+}
+
+/* Footer styles */
+footer {
+    background: #181818;
+    color: #bbb;
+    padding: 30px 0 15px;
+    text-align: center;
+    margin-top: 60px;
+}
+.footer-content p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+        max-width: 400px;
+    }
+    .header-container {
+        flex-direction: column;
+        height: auto;
+        padding: 16px;
+        gap: 12px;
+    }
+    nav ul {
+        gap: 16px;
+    }
+}
